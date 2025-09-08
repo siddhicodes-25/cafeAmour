@@ -1,0 +1,346 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: auto; /* Enable vertical scrolling */
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/pizza2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Ensures the background stays fixed */
+    filter: blur(2px);
+    transition: filter 0.3s ease;
+    z-index: -1;
+}
+  
+.title {
+    position: relative;
+    display: flex;
+    font-family: "Dancing Script";
+    font-weight: 900;
+    font-size: 100px;
+    color: azure;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+    height: 48vh;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example {
+    from {color: black;}
+}
+
+.subtitle {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: azure;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 21vh;
+}
+
+.footer {
+    font-size: large;
+    color: azure;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    display: flex;
+    padding: 8px;
+    /* background-color: #333; */
+}
+
+header p {
+    padding: 6px;
+    color: white;
+    font-weight: 600;
+    font-size: x-large;
+}
+
+header p:hover {
+    transform: scale(1.2); /* Scale up the element */
+    transition: transform 0.3s ease;
+}
+
+/* nav ul {
+    display: flex;
+    list-style: none;
+} */
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.whatsapp {
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue; 
+    padding-top: 15px;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    text-align: left;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-menu ul li {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.nav-menu ul li:hover{
+    transform: scale(1.1); /* Scale up the element */
+    transition: transform 0.3s ease;
+    background-color:chocolate;
+    border-radius: 5px;
+}
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(21, 14, 14);
+} */
+
+/* .menu-container {
+    width: 80%;
+    margin: 20px auto;
+    height: 800px; /*Fixed height for the scrollable area*/
+    /* background-color: #101010;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    overflow-y: auto; /* Enable vertical scrolling */
+/* } */
+
+.menu-container {
+    width: 80%;
+    margin: 20px auto;
+    min-height: 800px; 
+    background-color: #101010;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    overflow-y: auto; 
+}
+
+
+.menu-container::-webkit-scrollbar {
+    width: 7px; /* Scrollbar width */
+    border-radius: 8px;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+    background-color: #d32f2f; /* Scrollbar color */
+    border-radius: 8px; /* Rounded scrollbar */
+}
+  
+.menu-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+    border-radius: 8px;
+}
+
+.menu-container a{
+    background-color: chocolate;
+    color: #101010;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.menu-container a:hover {
+    color: #D3D3D3;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.menu-header h1 {
+    display: flex;
+    align-items: flex-end;
+    color: #d32f2f;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    padding-right: 1rem;
+    font-size: 40px;
+}
+
+.menu-subHeader {
+    margin-bottom: 10px;
+}
+
+.menu-subHeader h2 {
+    padding-left: 2px;
+    color: 	#D3D3D3;
+    font-size: 1.7rem;
+    border-bottom: 2px solid #d32f2f;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.menu-section {
+    margin-bottom: 30px;
+}
+
+.menu-section h2 {
+    color: 	#BEBEBE;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #d32f2f;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    color: 	#B0B0B0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #A9A9A9;
+    margin: 5px 0 0;
+    text-transform: capitalize;
+}
+
+.menu-item span {
+    font-size: 1.1rem;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+span::after {
+    content: "/-";
+}
+
+.icon-white {
+    filter: invert(1) brightness(1000%);
+} 
+
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 60px; /* Smaller font size for screens with width 600px or less */
+        font-weight: bold;
+    }
+
+    .nav-menu {
+        width: 70%;
+        top: 37px;
+    }
+
+    .nav-menu ul li {
+        font-size: 16px;
+        padding: 2px;
+    } 
+
+    .menu-container {
+        width: 100%;
+        margin: 20px auto;
+        height: 800px; /*Fixed height for the scrollable area*/
+        background-color: black;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 50px;
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    .menu-container a {
+        padding: 8px;
+    }
+
+    .menu-header h1 {
+        font-size: 35px;
+        margin: 0;
+    }
+}
